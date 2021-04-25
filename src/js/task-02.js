@@ -9,15 +9,19 @@ const ingredients = [
 
 const list = document.querySelector('#ingredients')
 
+
 const fillList = () => {
-  
+  const listArr = [];
+
   ingredients.forEach((elem) => {
     const listItem = document.createElement('li');
     
     listItem.textContent = elem;
-    list.appendChild(listItem)
+    listArr.push(listItem)
+    
   });
-  return []
+  
+  return list.append(...listArr)
 };
 
 

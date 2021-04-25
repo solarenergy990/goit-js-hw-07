@@ -7,11 +7,10 @@ const onInputChange = () => {
     
     if (inputRef.value.length === targetLength) {
         inputRef.classList.replace('invalid', 'valid')
-        return
     }
     else { inputRef.classList.replace('valid', 'invalid') }
     
 }
 
 
-inputRef.addEventListener('input', onInputChange);
+inputRef.addEventListener('blur', onInputChange);
