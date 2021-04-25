@@ -8,17 +8,18 @@ const getCatQuantity = () => {
 
 const getCatList = () => {
     const titles = catRef.querySelectorAll('h2')
-    
+    const catList = []
     let title
     let subCat
 
-    for (let i = 0; i < titles.length; i += 1) {
-        title = titles[i].textContent
-        subCat = titles[i].nextElementSibling.children.length
-        console.log(`Категория: ${title}, Количество элементов: ${subCat}`) 
-    }
+    titles.forEach((elem) => {
+        title = elem.textContent
+        subCat = elem.nextElementSibling.children.length
+        catList.push(`Категория: ${title}, Количество элементов: ${subCat}`);
+    });
     
-}
+    return catList
+};
 
 
 
