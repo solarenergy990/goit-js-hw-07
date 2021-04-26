@@ -1,48 +1,39 @@
 const images = [
   {
     url:
-      'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'White and Black Long Fur Cat',
+      "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "White and Black Long Fur Cat",
   },
   {
     url:
-      'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+      "https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Orange and White Koi Fish Near Yellow Koi Fish",
   },
   {
     url:
-      'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Group of Horses Running',
+      "https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    alt: "Group of Horses Running",
   },
 ];
 
-const listRef = document.querySelector('#gallery');
+const listRef = document.querySelector("#gallery");
 
- const createImgGallery = ({url, alt}) => {
-  const imgListItem = document.createElement('li');
-  imgListItem.classList.add('gallery__item');
-   
-  const imgRef = document.createElement('img');
+const createImgGallery = ({ url, alt }) => {
+  const imgListItem = document.createElement("li");
+  imgListItem.classList.add("gallery__item");
+
+  const imgRef = document.createElement("img");
   imgRef.src = url;
-   imgRef.alt = alt;
-   imgRef.width = 250;
-   imgRef.height = 160;
- 
-  imgListItem.append(imgRef)
+  imgRef.alt = alt;
+  imgRef.width = 250;
+  imgRef.height = 160;
 
-  return imgListItem
+  imgListItem.append(imgRef);
+
+  return imgListItem;
 };
-  
-const elements = images.map(createImgGallery)
-console.log(elements)
 
-listRef.append(...elements)
+const elements = images.map(createImgGallery);
+console.log(elements);
 
-
-
-
-
-
-
-
-
+listRef.append(...elements);
